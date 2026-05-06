@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Student Registration Form</h1>
+    <form>
+    <div class="form-group">
+        <label>Roll No:</label>
+        <input type="text" pattern="\d+" title="Only numbers allowed" required placeholder="Enter Roll Number">
+    </div>
+
+    <div class="form-group">
+        <label>Student Name:</label>
+        <div class="inline-inputs">
+            <input type="text" pattern="[A-Za-z ]+" title="Only letters and spaces allowed" required placeholder="First Name">
+            <input type="text" pattern="[A-Za-z ]+" title="Only letters and spaces allowed" required placeholder="Last Name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Father's Name:</label>
+        <input type="text" pattern="[A-Za-z ]+" title="Only letters and spaces allowed" required placeholder="Enter Father's Name">
+    </div>
+
+    <div class="form-group">
+        <label>Date of Birth:</label>
+        <div class="inline-inputs" required>
+            <input type="date">
+            <!-- <input type="text" placeholder="Day">
+            <input type="text" placeholder="Month">
+            <input type="text" placeholder="Year"> -->
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Mobile No:</label>
+        <div class="inline-inputs">
+            <span class="code">+91</span>
+            <input type="text" pattern="\d{10}" title="10-digit mobile number required" required placeholder="Enter Mobile Number">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email ID:</label>
+        <input type="email" required placeholder="Enter Email ID">
+    </div>
+
+    <div class="form-group">
+        <label>Password:</label>
+        <!-- <input type="password" required> -->
+        <input type="password" 
+         required
+         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+         title="Must include uppercase, lowercase, number, and special character">
+    </div>
+
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Department:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="department"> CSE</label>
+            <label><input type="radio" name="department"> IT</label>
+            <label><input type="radio" name="department"> ECE</label>
+            <label><input type="radio" name="department"> Civil</label>
+            <label><input type="radio" name="department"> Mech</label>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Course:</label>
+        <select>
+            <option>Select Current Course</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>B.Sc</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Student Photo:</label>
+        <input type="file">
+    </div>
+
+    <div class="form-group">
+        <label>City:</label>
+        <input type="text" placeholder="Enter City">
+    </div>
+
+    <div class="form-group">
+        <label>Address:</label>
+        <textarea placeholder="Enter Address"></textarea>
+    </div>
+
+    <button type="submit" class="btn">Register</button>
+</div>
+</form>
+
+</body>
+</html>
